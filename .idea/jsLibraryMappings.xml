@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{95cab1e9df1593d4e80272660304c8b5, fcc3c608ab010d815d3dd7650fca10f2, jquery-1.11.1, jquery.mobile-1.4.5}" />
+    <file url="PROJECT" libraries="{76640b314076d243f4f5e5d83b13a0a6, 95cab1e9df1593d4e80272660304c8b5, fcc3c608ab010d815d3dd7650fca10f2, jquery-1.11.1, jquery.mobile-1.4.5}" />
   </component>
 </project>

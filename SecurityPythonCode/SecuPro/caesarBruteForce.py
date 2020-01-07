@@ -1,8 +1,8 @@
 import random
 import string
 
-from cryptomath import gcd, findModInverse
-from detectEnglish import isEnglish
+from .cryptomath import gcd, findModInverse
+from .detectEnglish import isEnglish
 
 LETTERS = string.ascii_letters
 
@@ -153,7 +153,7 @@ if __name__ == "__main__":
     print("아핀 평문 텍스트 : ", affinePlain)
 
     while(True):
-        LETTERS = GenLETTERS(2);
+        LETTERS = GenLETTERS(2)
         print("Generated LETTRS :", LETTERS)
         status = affineHackAutoDetect(LETTERS, affineCipher)
         if status == 1:
