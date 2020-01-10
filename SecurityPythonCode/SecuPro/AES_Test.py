@@ -1,11 +1,10 @@
 from Crypto import Random
 from Crypto.Cipher import AES
-import os
 
 BLOCK_SIZE = 16
-KEY_SIZE=32
+KEY_SIZE = 32
 
-key = os.urandom(KEY_SIZE)
+key = Random.new().read(KEY_SIZE)
 IV = Random.new().read(BLOCK_SIZE)
 
 message = b"Information Security & Programming. Test Message!...."
