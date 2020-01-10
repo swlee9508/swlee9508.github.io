@@ -135,9 +135,9 @@
 
                 <script src="https://gist.github.com/FLant-Lee/2319cb416a5393b44f0bab6efa1f3a21.js"></script>
 
-                <p><span style="font-size: x-large">Block size</span></p>
+                <p><span style="font-size: x-large">AES 암호화의 전반적 코드 진행 방식</span></p>
 
-                <p>블록 사이즈에 관에서 이해 하는 부분에서 아래의 그림을 참고로 설명 하겠습니다.</p>
+                <p>AES의 암호화 과정의 대한 단계를 설명하면서<br>블록 사이즈에 관에서 이해 하는 부분에서 아래의 그림을 참고로 설명 하겠습니다.</p>
 
                 <a href="#">
                     <img class="img-fluid" src="../img/SecurityPost/AES_Cipher/AES_Block_Img.png" alt="">
@@ -146,8 +146,16 @@
                 <p>
                     이번 암호화 과정에서는 수신자가 보내는 메세지의 사이즈를 <span style="color: red">16byte(128bit)</span>라고 가정을 하면<br>
                     보내는 메세지를 담기 위한 블록의 전체 사이즈를 정해 주어야 됩니다.<br>
-                    그래서 블록 사이즈를 메세지 사이즈 만큼 생성을 시키는 것입니다.
+                    그래서 블록 사이즈를 메세지 사이즈 만큼 생성을 시키는 것입니다.<br>
+                    그 다음 들어온 메세지를 1byte(4bit) 단위로 분할하여 바이트 치환을 진행 합니다.<br>
+                    그 다음으로 각 블록을 비밀 키 값을 가지고 shiftRows 그리고 MixColumns 를 진행 합니다.<br>
+                    마지막으로 각 키와의 XOR 연산을 진행한 값을 저장 합니다.<br>
+                    이러한 과정을 반복하면 암호문이 생성 됩니다.
                 </p>
+
+
+
+
 
 
 
