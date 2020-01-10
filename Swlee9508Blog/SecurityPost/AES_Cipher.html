@@ -114,7 +114,7 @@
                     <img class="img-fluid" src="../img/SecurityPost/AES_Cipher/AES_Cipher_1.png" alt="">
                 </a>
 
-                <p><span style="white-space:nowrap;">맨 처음 우리는 평문에 대한 암호화 작업을 위해 Pycrptodome 지원하는 AES 라이브러리 및 필요한 다른 라이브러리를 import 시켜주겠습니다.</span></p>
+                <p>맨 처음 우리는 평문에 대한 암호화 작업을 위해 Pycrptodome 지원하는 AES 라이브러리 및 <br>필요한 다른 라이브러리를 import 시켜주겠습니다.</p>
                 <script src="https://gist.github.com/FLant-Lee/5e77e38fd4c34a12ca3e0f24a61e8579.js"></script>
 
                 <p>위의 코드를 보시면<br>
@@ -125,12 +125,33 @@
                 <p>
                     <span style="white-space: nowrap">AES 암호화는 블록 단위로 암호화가 진행 되는데 각각의 블록의 대한 사이즈를 정의 해주어야 됩니다. </span><br>
                     <span style="white-space: nowrap">보통 AES 암호화 작업에서 많이 사용되는 블록 크기는 16 byte 이기 떄문에 16 byte 의 사이즈를 가진 블록을 생성 해주면 됩니다. </span><br>
-                    <span style="color: red; font-size: small">추후 IV 값을 설정 하는데에 이용 됩니다.</span><br>
+                    <span style="color: red; font-size: small">추후 IV 값을 설정 하는데에 이용 됩니다.</span>
+                </p>
+
+                <p>
                     <span style="white-space: nowrap">그리고 공유할 비밀 키의 사이즈를 정해주어야 됩니다. 16 byte 블록 사이즈 기준의 키 사이즈는 32 byte 값으로 설정해 줍니다. </span><br>
                     <span style="white-space: nowrap">아래의 코드를 참조하여 기존 코드에 추가 시켜 줍니다.</span>
                 </p>
 
                 <script src="https://gist.github.com/FLant-Lee/2319cb416a5393b44f0bab6efa1f3a21.js"></script>
+
+                <p><span style="font-size: x-large">Block size</span></p>
+
+                <p>블록 사이즈에 관에서 이해 하는 부분에서 아래의 그림을 참고로 설명 하겠습니다.</p>
+
+                <a href="#">
+                    <img class="img-fluid" src="../img/SecurityPost/AES_Cipher/AES_Block_Img.png" alt="">
+                </a>
+
+                <p>
+                    이번 암호화 과정에서는 수신자가 보내는 메세지의 사이즈를 <span style="color: red">16byte(128bit)</span>라고 가정을 하면<br>
+                    보내는 메세지를 담기 위한 블록의 전체 사이즈를 정해 주어야 됩니다.<br>
+                    그래서 블록 사이즈를 메세지 사이즈 만큼 생성을 시키는 것입니다.
+                </p>
+
+
+
+
 
 
 
